@@ -43,7 +43,7 @@ beer_fig = go.Figure(data=beer_data, layout=beer_layout)'''
 
 
 url = 'https://github.com/haining-b/flying-dog-beers/blob/21f0a9cc60377c892673d1e85e8e1555efc2f621/TryData.csv%20'
-mandat_plus = pd.read_csv(url,sep=",")
+mandat_plus = pd.read_csv('TryData.csv')
 
 beer_fig = px.line(mandat_plus, x="date_time", y="dryweight", color = 'pond',title='Dryweight Per Pond')
 
