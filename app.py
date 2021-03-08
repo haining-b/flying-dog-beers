@@ -38,14 +38,17 @@ beer_layout = go.Layout(
     barmode='group',
     title = mytitle
 )
+
+
 beerdf = pd.DataFrame(ibu_values,abv_values)
 beerdf.columns = ['ibu_values','abv_values']
 beer_fig = go.Figure(data=beer_data, layout=beer_layout)'''
 
-
+d = {'ibu_values' :ibu_values,'abv_values':abv_values}
 url = 'https://github.com/haining-b/flying-dog-beers/blob/30f36ab20a05a217173b4a2dfd87e063fb0b52b2/TryData.csv'
 mandat_plus = pd.read_csv(url, error_bad_lines=False)
 print(mandat_plus.columns)
+deerdf = pd.DataFrame(d)
 beer_fig = px.line(data = beerdf, x=ibu_values, y=abv_values,title='Dryweight Per Pond')
 
 
