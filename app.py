@@ -4,7 +4,7 @@ import dash_html_components as html
 import plotly.graph_objs as go
 import plotly.express as px
 import pandas as pd
-'''
+
 ########### Define your variables
 beers=['Chesapeake Stout', 'Snake Dog IPA', 'Imperial Porter', 'Double Dog IPA']
 ibu_values=[35, 60, 85, 75]
@@ -18,7 +18,7 @@ label1='IBU'
 label2='ABV'
 githublink='https://github.com/austinlasseter/flying-dog-beers'
 sourceurl='https://www.flyingdog.com/beers/'
-
+'''
 ########### Set up the chart
 bitterness = go.Bar(
     x=beers,
@@ -42,7 +42,7 @@ beer_layout = go.Layout(
 beer_fig = go.Figure(data=beer_data, layout=beer_layout)'''
 
 
-url = 'https://github.com/haining-b/flying-dog-beers/blob/eaa3a0f37f1de1278b70111a9e79ce2f4bdeb945/TryData.csv%20'
+url = 'https://raw.githubusercontent.com/your_account_name/repository_name/master/file.csv'
 mandat_plus = pd.read_csv(url,sep=",")
 
 beer_fig = px.line(mandat_plus, x="date_time", y="dryweight", color = 'pond',title='Dryweight Per Pond')
